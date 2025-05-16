@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Explicit Depth-Aware Blurry Video Frame Interpolation Guided by Differential Curves">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explicit Depth-Aware Blurry Video Frame Interpolation Guided by Differential Curves</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Explicit Depth-Aware Blurry Video Frame Interpolation Guided by Differential Curves</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"> </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="header_dark_gray">
+      <h2 class="title is-3">Animation</h2>
+    </div>
+
+    <!-- <div class="columns is-centered"> -->
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <!-- <h2 class="title is-2">Animation</h2> -->
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">3D Interpolating states with Scene Flow </h3>
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column interpolation-video-column">
+              <div id="interpolation-image-wrapper">
+                Loading... Click
+              </div>
+              <input class="slider is-fullwidth is-large is-info"
+                    id="interpolation-slider"
+                    step="1" min="0" max="48" value="0" type="range">
+            </div>
+          </div>
+          <br/>
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">3D Interpolating states witd Scene FLow</h3>
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column interpolation-video-column">
+              <div id="interpolation-image-wrapper2">
+                Loading... Click
+              </div>
+              <input class="slider is-fullwidth is-large is-info"
+                    id="interpolation-slider2"
+                    step="1" min="0" max="48" value="0" type="range">
+            </div>
+          </div>
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+  <!-- </div> -->
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="header_dark_gray">
+      <h2 class="title is-3">Abstract</h2>
+    </div>
+    <div class="content has-text-justified">
+        <p>
+          Blurry video frame interpolation (BVFI), which aims to
+          generate high-frame-rate clear videos from low-frame-rate
+          blurry inputs, is a challenging yet significant task in com-
+          puter vision. Current state-of-the-art approaches typically
+          rely on linear or quadratic models to estimate intermedi-
+          ate motion. However, these methods often overlook depth
+          variations that occur during fast object motion, leading to
+          changes in object size and hindering interpolation perfor-
+          mance.This paper proposes the Differential Curves-guided
+          Blurry Video Frame Interpolation (DC-BVFI) framework,
+          which leverages the differential curves theory to analyze
+          and mitigate the effects of depth variations caused by ob-
+          ject motion. Specifically, DC-BVFI consists of UBNet and
+          MPNet. Unlike prior approaches that rely on optical flow
+          for frame interpolation, MPNet is designed to estimate the
+          3D scene flow, which facilitates a more precise awareness
+          of depth and velocity variations. Since scene flow cannot
+          be directly inferred in the 2D frame space, UBNet is intro-
+          duced to transform them into 3D point maps. Extensive ex-
+          periments demonstrate that the proposed DC-BVFI frame-
+          work surpasses state-of-the-art performance in simulated
+          and real-world datasets.
+        </p>
+    </div>
+    <div class="item">
+      <img src="./static/images/intro3.png" alt="High level figure for the method">
+    </div> 
+	<!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="container">
+		  <div class="header_dark_gray">
+				<h2 class="title is-3">Comparisons to prior work</h2>
+			</div>
+			<div class="content has-text-justified">
+				<p>
+				Below we compare DC-BMFI to other methods in the literature.
+				</p>
+			</div>
+			<div class="row" id="comparisons-select" style="text-align: center;">
+				<div class="col"> QVI </div>
+				<div class="col"> EQVI </div>
+				<div class="col"> IQ-VFI </div>
+				<div class="col selected"> Ours </div>
+      </div>
+      <div id="comparisons-show">
+      	<div class="item"> 
+          <div class="row"> 
+            <!-- <div class="col"><video autoplay loop muted ><source type="video/mp4" src="./static/videos/1_input.mp4"></video></div>  -->
+              <!-- <div class="col" style="width: 12rem;"> <div class="right_arrow"></div></div> -->
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/08_qvi.mp4"></video></div> 
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/08_eqvi.mp4"></video></div> 
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/08_iqvfi.mp4"></video></div>
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/08_ours.mp4"></video></div> 
+              <!-- <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/08_gt.mp4"></video></div>  -->
+          </div>
+        </div>
+
+      	<div class="item"> 
+          <div class="row"> 
+            <!-- <div class="col"><video autoplay loop muted ><source type="video/mp4" src="./static/videos/1_input.mp4"></video></div>  -->
+              <!-- <div class="col" style="width: 12rem;"> <div class="right_arrow"></div></div> -->
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/09_qvi.mp4"></video></div> 
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/09_eqvi.mp4"></video></div> 
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/09_iqvfi.mp4"></video></div>
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/09_ours.mp4"></video></div> 
+              <!-- <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/09_gt.mp4"></video></div>  -->
+          </div>
+        </div>
+
+      	<div class="item"> 
+          <div class="row"> 
+            <!-- <div class="col"><video autoplay loop muted ><source type="video/mp4" src="./static/videos/1_input.mp4"></video></div>  -->
+              <!-- <div class="col" style="width: 12rem;"> <div class="right_arrow"></div></div> -->
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/10_qvi.mp4"></video></div> 
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/10_eqvi.mp4"></video></div> 
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/10_iqvfi.mp4"></video></div>
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/10_ours.mp4"></video></div> 
+              <!-- <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/10_gt.mp4"></video></div>  -->
+          </div>
+        </div>
+
+      	<div class="item"> 
+          <div class="row"> 
+            <!-- <div class="col"><video autoplay loop muted ><source type="video/mp4" src="./static/videos/1_input.mp4"></video></div> 
+              <div class="col" style="width: 12rem;"> <div class="right_arrow"></div></div> -->
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/12_qvi.mp4"></video></div> 
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/12_eqvi.mp4"></video></div> 
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/12_iqvfi.mp4"></video></div>
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/12_ours.mp4"></video></div> 
+              <!-- <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/12_gt.mp4"></video></div>  -->
+          </div>
+        </div>
+
+        <div class="item"> 
+          <div class="row"> 
+            <!-- <div class="col"><video autoplay loop muted ><source type="video/mp4" src="./static/videos/1_input.mp4"></video></div> 
+              <div class="col" style="width: 12rem;"> <div class="right_arrow"></div></div> -->
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="static/videos/13_qvi.mp4"></video></div> 
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/13_eqvi.mp4"></video></div> 
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="static/videos/13_iqvf.mp4"></video></div>
+              <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/13_ours.mp4"></video></div> 
+              <!-- <div class="col"><video autoplay loop muted><source type="video/mp4" src="./static/videos/13_gt.mp4"></video></div>  -->
+          </div>
+        </div>
+
+    </div>
+  <div>
+</div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a> -->
+      <a class="icon-link" href="https://github.com" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
