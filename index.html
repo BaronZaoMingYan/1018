@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Explicit Depth-Aware Blurry Video Frame Interpolation Guided by Differential Curves">
+        content="Surface-Aware Feed-Forward Quadratic Gaussian for Frame Interpolation with Large Motion">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Explicit Depth-Aware Blurry Video Frame Interpolation Guided by Differential Curves</title>
+  <title>Surface-Aware Feed-Forward Quadratic Gaussian for Frame Interpolation with Large Motion</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -49,7 +49,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Explicit Depth-Aware Blurry Video Frame Interpolation Guided by Differential Curves</h1>
+          <h1 class="title is-1 publication-title">Surface-Aware Feed-Forward Quadratic Gaussian for Frame Interpolation with Large Motion</h1>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"> </span>
@@ -120,28 +120,14 @@
     </div>
     <div class="content has-text-justified">
         <p>
-          Blurry video frame interpolation (BVFI), which aims to
-          generate high-frame-rate clear videos from low-frame-rate
-          blurry inputs, is a challenging yet significant task in com-
-          puter vision. Current state-of-the-art approaches typically
-          rely on linear or quadratic models to estimate intermedi-
-          ate motion. However, these methods often overlook depth
-          variations that occur during fast object motion, leading to
-          changes in object size and hindering interpolation perfor-
-          mance.This paper proposes the Differential Curves-guided
-          Blurry Video Frame Interpolation (DC-BVFI) framework,
-          which leverages the differential curves theory to analyze
-          and mitigate the effects of depth variations caused by ob-
-          ject motion. Specifically, DC-BVFI consists of UBNet and
-          MPNet. Unlike prior approaches that rely on optical flow
-          for frame interpolation, MPNet is designed to estimate the
-          3D scene flow, which facilitates a more precise awareness
-          of depth and velocity variations. Since scene flow cannot
-          be directly inferred in the 2D frame space, UBNet is intro-
-          duced to transform them into 3D point maps. Extensive ex-
-          periments demonstrate that the proposed DC-BVFI frame-
-          work surpasses state-of-the-art performance in simulated
-          and real-world datasets.
+          Large motion poses a critical challenge in Video Frame Interpolation (VFI) task, as it requires accurate modeling of object correspondences across frames.
+          Existing methods primarily rely on convolutional or attention-based models, which operate at the pixel or patch level. 
+          This inherently limits them to local object correspondences, making it difficult to capture frame-level object correspondences and often leading to failure under large motion.
+          To implement the core idea, we propose the Surface-Aware Feed-Forward Quadratic Gaussian framework, mainly consisting of the Feed-Forward Quadratic Gaussian and Surface Properties modules.
+          Feed-Forward Quadratic Gaussian is designed to map frames to Quadratic Gaussian, which flexibly fits the object surface.
+          Unlike previous methods that compute local correspondences, Surface Properties facilitates global surface-level alignment, which drives object correspondence alignment.
+          Finally, we rasterize the surface properties onto the interpolated camera plane and define loss functions to supervise alignment explicitly.
+          The outstanding performance on the large motion benchmark demonstrates the effectiveness of our framework. 
         </p>
     </div>
     <div class="item">
@@ -155,7 +141,7 @@
   <div class="container is-max-desktop">
     <div class="container">
 		  <div class="header_dark_gray">
-				<h2 class="title is-3">Comparisons to prior work</h2>
+				<h2 class="title is-3">Comparisons to prior of larg motion work</h2>
 			</div>
 			<div class="content has-text-justified">
 				<p>
