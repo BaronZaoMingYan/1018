@@ -6,7 +6,7 @@ var NUM_INTERP_FRAMES = 48;
 var interp_images = [];
 function preloadInterpolationImages() {
   for (var i = 1; i < NUM_INTERP_FRAMES; i++) {
-    var path = "./static/interpolation/3d_vis/" + "000000_" + String(i).padStart(2, '0') + '.png';
+    var path = "./static/interpolation/3d_vis/" + "combined_" + String(i) + '.png';
     interp_images[i] = new Image();
     interp_images[i].src = path;
   }
