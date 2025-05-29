@@ -66,10 +66,11 @@
     <div class="header_dark_gray">
       <h2 class="title is-3">Motivation</h2>
     </div>
-    <div class="item">
+    <!-- 图片并列显示 -->
+    <div class="image-row">
       <img src="./static/images/intro1.png" alt="High level figure for the method">
       <img src="./static/images/intro2.png" alt="High level figure for the method">
-    </div> 
+    </div>
     
     <h3 class="title is-4">Motivation Animation</h3>
       <div class="content has-text-justified">
@@ -83,6 +84,27 @@
 	<!--/ Abstract. -->
   </div>
 </section>
+
+<style>
+  .image-row {
+    display: flex;
+    gap: 20px; /* 图片之间的间距 */
+    justify-content: center;
+    align-items: flex-start; /* 图片顶部对齐 */
+    flex-wrap: wrap; /* 小屏幕自动换行 */
+  }
+
+  .image-row img {
+    height: 300px; /* 你可以根据需要调整高度 */
+    object-fit: cover; /* 保证图片不变形 */
+  }
+
+  @media (max-width: 768px) {
+    .image-row img {
+      height: 200px;
+    }
+  }
+</style>
 
 <section class="section">
   <div class="container is-max-desktop">
