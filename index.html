@@ -66,11 +66,13 @@
     <div class="header_dark_gray">
       <h2 class="title is-3">Motivation</h2>
     </div>
-    <!-- 图片并列显示 -->
-    <div class="image-row">
+    <p>
+    Large motion poses a critical challenge in Video Frame Interpolation (VFI) task, as it requires accurate modeling of object correspondences across frames.
+    Existing methods primarily rely on convolutional or attention-based models, which operate at the pixel or patch level. 
+    This inherently limits them to local object correspondences, making it difficult to capture frame-level object correspondences and often leading to failure under large motion.
+    </p>
       <img src="./static/images/intro1.png" alt="High level figure for the method"  style="max-width: 100%;  height: auto;">
       <!-- <img src="./static/images/intro2.png" alt="High level figure for the method"> -->
-    </div>
 	<!--/ Abstract. -->
   </div>
 </section>
@@ -104,9 +106,7 @@
     </div>
     <div class="content has-text-justified">
         <p>
-          Large motion poses a critical challenge in Video Frame Interpolation (VFI) task, as it requires accurate modeling of object correspondences across frames.
-          Existing methods primarily rely on convolutional or attention-based models, which operate at the pixel or patch level. 
-          This inherently limits them to local object correspondences, making it difficult to capture frame-level object correspondences and often leading to failure under large motion.
+          
           To implement the core idea, we propose the Surface-Aware Feed-Forward Quadratic Gaussian framework, mainly consisting of the Feed-Forward Quadratic Gaussian and Surface Properties modules.
           Feed-Forward Quadratic Gaussian is designed to map frames to Quadratic Gaussian, which flexibly fits the object surface.
           Unlike previous methods that compute local correspondences, Surface Properties facilitates global surface-level alignment, which drives object correspondence alignment.
@@ -131,8 +131,7 @@
 
     <div class="content has-text-justified">
       <p>
-        To better understand the interpolation process, we visualize key intermediate variables, including rendered surface normals, video frames, and curvature maps.
-        Use the slider here to interpolate between the left frame and the right frame.
+        
       </p>
     </div>
 
