@@ -81,12 +81,11 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <!-- 第一部分：Framework -->
-    <div class="header_dark_gray">
-      <h2 class="title is-3">Framework</h2>
-      <p class="subtitle is-5">子标题1 of Overview</p>
-    </div>
+    <!-- 大标题 -->
+    <h2 class="title is-3">Framework</h2>
 
+    <!-- 子标题 1 -->
+    <h3 class="title is-5">子标题1：Overview</h3>
     <div class="content has-text-justified">
       <p>
         To implement the core idea, we propose the Surface-Aware Feed-Forward Quadratic Gaussian framework, mainly consisting of the Feed-Forward Quadratic Gaussian and Surface Properties modules.
@@ -103,24 +102,27 @@
       </figure>
     </div>
 
-    <!-- 第二部分：Detail of motion -->
-    <div class="header_dark_gray" style="margin-top: 2rem;">
-      <h2 class="title is-3">Detail of Motion</h2>
-      <p class="subtitle is-5">子标题：线性运动处理</p>
+    <!-- 子标题 2 -->
+    <h3 class="title is-5" style="margin-top: 2rem;">子标题2：线性运动处理</h3>
+    <div class="content has-text-justified">
+      <p>
+        We handle linear motion by modeling the temporal trajectory of each point using a quadratic function, allowing for more accurate interpolation of object motion across frames.
+        This approach captures both constant velocity and acceleration, improving performance over traditional linear methods.
+      </p>
     </div>
 
-    <!-- 你可以在这里继续添加对应的文字或图片内容 -->
-
-    <!-- 第三部分：3D to 2D -->
-    <div class="header_dark_gray" style="margin-top: 2rem;">
-      <h2 class="title is-3">3D to 2D</h2>
-      <p class="subtitle is-5">子标题：渲染</p>
+    <!-- 子标题 3 -->
+    <h3 class="title is-5" style="margin-top: 2rem;">子标题3：渲染</h3>
+    <div class="content has-text-justified">
+      <p>
+        After computing the 3D surface properties, we project them onto the 2D image plane using differentiable rendering.
+        This allows us to compare the rendered results with ground truth images and define loss functions that guide the training process.
+      </p>
     </div>
-
-    <!-- 你可以在这里继续添加对应的文字或图片内容 -->
 
   </div>
 </section>
+
 
 
 
