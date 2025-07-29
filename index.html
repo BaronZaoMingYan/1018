@@ -82,10 +82,12 @@
   <div class="container is-max-desktop">
 
     <!-- 大标题 -->
-    <h2 class="title is-3">Framework</h2>
+    <div class="header_dark_gray">
+      <h2 class="title is-3">Method</h2>
+    </div>
 
     <!-- 子标题 1 -->
-    <h3 class="title is-5">子标题1：Overview</h3>
+    <h3 class="title is-5">(I) Overview</h3>
     <div class="content has-text-justified">
       <p>
         To implement the core idea, we propose the Surface-Aware Feed-Forward Quadratic Gaussian framework, mainly consisting of the Feed-Forward Quadratic Gaussian and Surface Properties modules.
@@ -103,16 +105,37 @@
     </div>
 
     <!-- 子标题 2 -->
-    <h3 class="title is-5" style="margin-top: 2rem;"> Line Motion </h3>
+    <h3 class="title is-5" style="margin-top: 2rem;">(II) Line Motion Animation</h3>
     <div class="content has-text-justified">
       <p>
-        We handle linear motion by modeling the temporal trajectory of each point using a quadratic function, allowing for more accurate interpolation of object motion across frames.
-        This approach captures both constant velocity and acceleration, improving performance over traditional linear methods.
+        To better understand the interpolation process, we visualize key intermediate variables, including rendered surface normals, video frames, and curvature maps.
+        Use the slider here to interpolate between the left frame and the right frame.
       </p>
     </div>
 
+    <div class="box has-text-centered">
+      <h3 class="title is-5">Scene 1</h3>
+      <figure class="image is-16by9">
+        <img src="./static/moves/1.gif" alt="Scene 1 Animation" style=" width: 100%;  height: auto;">
+      </figure>
+    </div>
+
+    <div class="box has-text-centered">
+      <h3 class="title is-5">Scene 2</h3>
+      <figure class="image is-16by9">
+        <img src="./static/moves/2.gif" alt="Scene 2 Animation" style="max-width: 100%;  height: auto;">
+      </figure>
+    </div>
+
+    <div class="box has-text-centered">
+      <h3 class="title is-5">Scene 3</h3>
+      <figure class="image is-16by9">
+        <img src="./static/moves/3.gif" alt="Scene 3 Animation" style="max-width: 100%;  height: auto;">
+      </figure>
+    </div>
+
     <!-- 子标题 3 -->
-    <h3 class="title is-5" style="margin-top: 2rem;">Line Motion </h3>
+    <h3 class="title is-5" style="margin-top: 2rem;">(III) Line Motion </h3>
     <div class="content has-text-justified">
       <p>
         After computing the 3D surface properties, we project them onto the 2D image plane using differentiable rendering.
@@ -159,43 +182,6 @@
       <h3 class="title is-5">Scene 3</h3>
       <figure class="image">
         <img src="./static/backbone/3.png" alt="Scene 3" style="max-width: 100%;  height: auto;">
-      </figure>
-    </div>
-
-  </div>
-</section>
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="header_dark_gray">
-      <h2 class="title is-3">Motion Animation</h2>
-    </div>
-
-    <div class="content has-text-justified">
-      <p>
-        To better understand the interpolation process, we visualize key intermediate variables, including rendered surface normals, video frames, and curvature maps.
-        Use the slider here to interpolate between the left frame and the right frame.
-      </p>
-    </div>
-
-    <div class="box has-text-centered">
-      <h3 class="title is-5">Scene 1</h3>
-      <figure class="image is-16by9">
-        <img src="./static/moves/1.gif" alt="Scene 1 Animation" style=" width: 100%;  height: auto;">
-      </figure>
-    </div>
-    <div class="box has-text-centered">
-      <h3 class="title is-5">Scene 2</h3>
-      <figure class="image is-16by9">
-        <img src="./static/moves/2.gif" alt="Scene 2 Animation" style="max-width: 100%;  height: auto;">
-      </figure>
-    </div>
-    <div class="box has-text-centered">
-      <h3 class="title is-5">Scene 3</h3>
-      <figure class="image is-16by9">
-        <img src="./static/moves/3.gif" alt="Scene 3 Animation" style="max-width: 100%;  height: auto;">
       </figure>
     </div>
 
