@@ -10,6 +10,11 @@
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -93,7 +98,8 @@
     <h3 class="title is-5">(I) Input Frames</h3>
     <div class="content has-text-justified">
       <p>
-        We take two input video frames, $I^0 \in \mathbb{R}^{H \times W}$ and $I^1 \in \mathbb{R}^{H \times W \times 3}$, where H and W denote the height and width of the image, respectively.
+        We take two input video frames, \(I^0 \in \mathbb{R}^{H \times W}\) and \(I^1 \in \mathbb{R}^{H \times W \times 3}\), 
+        where H and W denote the height and width of the image, respectively.
       </p>
     </div>
 
@@ -101,12 +107,12 @@
     <div class="content has-text-justified">
       <p>
         VGGT demonstrates strong performance in modeling **static correspondences**. 
-        We leverage this capability to obtain the point clouds $\mathcal{P}^0 \in \mathbb{R}^{HW \times 3}$  
-        and $\mathcal{P}^1 \in \mathbb{R}^{HW \times 3}$  aligned based on static correspondences, 
-        where $HW$ is the number of points (pixels), $3$ represents the 3D spatial coordinates. 
-In addition, we visualize the scene by constructing $[ \mathcal{P}^0 || \mathcal{P}^1 ]$ to 
+        We leverage this capability to obtain the point clouds \(\mathcal{P}^0 \in \mathbb{R}^{HW \times 3}\) 
+        and \(\mathcal{P}^1 \in \mathbb{R}^{HW \times 3}\) aligned based on static correspondences, 
+        where \(HW\) is the number of points (pixels), \(3\) represents the 3D spatial coordinates. 
+In addition, we visualize the scene by constructing \([ \mathcal{P}^0 || \mathcal{P}^1 ]\) to 
 verify the quality of the static correspondence alignment in below section (Comparison Backbones). 
-Here, the symbol $||$  denotes the concatenation operation, i.e., torch.cat() in PyTorch.
+Here, the symbol \(||\) denotes the concatenation operation, i.e., torch.cat() in PyTorch.
       </p>
     </div>
 
@@ -124,9 +130,9 @@ Here, the symbol $||$  denotes the concatenation operation, i.e., torch.cat() in
         the short temporal interval between adjacent frames in video interpolation tasks, 
         we follow the linear motion assumption of previous works. 
         Based on this, we compute the interpolated point cloud at time  
-        $t \in [0, 1]$ as: $\mathcal{P}^t = (1-t) \mathcal{P}^0 + t \mathcal{P}^1$. 
-        By continuously varying $t$, we generate a sequence of intermediate point clouds 
-        $\mathcal{P}^t \in \mathbb{R}^{HW\times3}$.
+        \(t \in [0, 1]\) as: \(\mathcal{P}^t = (1-t) \mathcal{P}^0 + t \mathcal{P}^1\). 
+        By continuously varying \(t\), we generate a sequence of intermediate point clouds 
+        \(\mathcal{P}^t \in \mathbb{R}^{HW\times3}\).
       </p>
     </div>
 
